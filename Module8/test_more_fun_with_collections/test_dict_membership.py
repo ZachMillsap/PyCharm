@@ -1,6 +1,13 @@
 import unittest
 def in_dict(dict,value):
-    pass
+
+   for dict_value in test_dict.values():
+
+       if(dict_value == value):
+
+           return True
+
+   return False
 
 
 
