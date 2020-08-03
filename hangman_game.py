@@ -15,7 +15,7 @@ stages = [PhotoImage(file="images/hang0.png"), PhotoImage(file="images/hang1.png
           PhotoImage(file="images/hang3.png"), PhotoImage(file="images/hang4.png"), PhotoImage(file="images/hang5.png"),
           PhotoImage(file="images/hang6.png")]
 
-class Hangman (object):
+class Hangman(object):
     """Hangman Game"""
 
     def __init__(self, secret_word, letter):
@@ -42,7 +42,8 @@ class Hangman (object):
         return secret_word
     #Letter guessing function
 
-    def guess(letter):
+    def guess(self, letter):
+        self.letter = letter
         global numberOfGuesses
         if numberOfGuesses<6:
             txt = list(secret_word_blank_spaces)
@@ -77,6 +78,6 @@ Button(window, text = "New Game", command = lambda:Hangman(), font = ("Ariel 14 
 
 
     # Driver
-if __name__ == '__game__':
-    Hangman()
+if __name__ == '__main__':
+    Hangman(secret_word, letter)
 
