@@ -1,4 +1,4 @@
-#hangman.py
+#hangman_game.py
 from words import word_list
 from string import ascii_uppercase
 from tkinter import *
